@@ -7,12 +7,8 @@
     authToken: null,
     baseURL: 'https://api.github.com',
 
-    fetch: (endpoint, options) => {
+    fetch: (endpoint, options = {}) => {
       if (GitHub.isAuthenticated) {
-        if (!options) {
-          options = {};
-        }
-
         if (!options.hasOwnProperty('headers') || !options.headers) {
           options.headers = new Headers();
         }
@@ -21,6 +17,8 @@
 
         options.headers.set('Authorization', `Basic ${authToken}`)
       }
+
+      options.cache = 'no-cache';
 
       return fetch(GitHub.baseURL + endpoint, options);
     },
