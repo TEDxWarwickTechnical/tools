@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.1/qrcode.min.js" integrity="sha256-pBaPgOo3xYkkkPaVFa/xFRMlTildJ+9hUSK1MgiJV58=" crossorigin="anonymous"></script>
+    <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.6/svg.min.js" integrity="sha256-M8IkAPnXdVChgPQwts/KeepRP4ogs+hzBtPmVhUj5YA=" crossorigin="anonymous"></script>
+    <!-- <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.1/qrcode.js" integrity="sha256-eaRwtqioQx1RYCO76TMwNKURzMnpzc7Ad3EhFVcI7vs=" crossorigin="anonymous"></script> -->
+    <!-- <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.6/svg.js" integrity="sha256-9x/FhNMIxod0K9WfGBu9Sj/UypHSOIfrnvshR96qqIM=" crossorigin="anonymous"></script> -->
+    <script type="application/javascript" src="assets/qr/qr.js"></script>
+    <title>QR Code Generator</title>
+  </head>
+  <body>
+    <h1>QR Code Generator</h1>
+    <section>
+      <h2>1. Select link</h2>
+      <div>
+        <select id="link-list-select" disabled>
+          <option>&lt;Not loaded&gt;</option>
+        </select>
+        <button id="link-list-reload">Reload</button>
+        <span id="link-list-stats"></span>
+      </div>
+      <div>
+        <form id="github-auth-form">
+          <input id="github-auth-user" type="text" placeholder="Username">
+          <input id="github-auth-token" type="password" placeholder="Auth token">
+          <button type="submit">Apply</button>
+          <span id="github-auth-stats">Reached the request limit? Enter an auth token to continue.</span>
+        </form>
+      </div>
+    </section>
+    <section>
+      <h2>2. Generate QR code</h2>
+      <button id="qr-generate">Generate</button>
+    </section>
+    <section>
+      <h2>3. Preview and Save</h2>
+      <div id="qr-preview"></div>
+      <div>
+        <a id="qr-download-svg" disabled>Download SVG</a>
+      </div>
+  </body>
+</html>

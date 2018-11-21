@@ -1,0 +1,45 @@
+title: TEDxWarwick Tools
+permalink: /:title
+
+
+#############
+# Renderers #
+#############
+
+markdown: kramdown
+
+kramdown:
+  auto_ids: false
+  parse_block_html: true
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-redirect-from
+
+error_mode: strict
+strict_variables: true
+strict_filters: true
+
+
+#########
+# Files #
+#########
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - LICENSE
+  - README.md
+  - CNAME
+
+
+###################
+# Site parameters #
+###################
+
+url: https://tools.tedxwarwick.com
+
+repo: "TEDxWarwickTechnical/tools"
